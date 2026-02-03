@@ -1,0 +1,259 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.container.success {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.content {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 60px 40px;
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 100%;
+  animation: fadeIn 0.8s ease-out;
+  position: relative;
+  z-index: 10;
+}
+
+.title {
+  font-size: 3rem;
+  color: #f5576c;
+  margin-bottom: 30px;
+  font-weight: 700;
+  animation: pulse 2s ease-in-out infinite;
+  line-height: 1.2;
+}
+
+.heart-icon {
+  font-size: 5rem;
+  animation: heartbeat 1.5s ease-in-out infinite;
+  margin: 20px 0;
+}
+
+.prayer-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.hooray-gif {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.message {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.yes-button,
+.no-button {
+  padding: 18px 40px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-family: inherit;
+}
+
+.yes-button {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  transform-origin: center;
+}
+
+.yes-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(245, 87, 108, 0.4);
+}
+
+.yes-button:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.no-button {
+  background: #f0f0f0;
+  color: #666;
+  transform-origin: center;
+}
+
+.no-button:hover {
+  background: #e0e0e0;
+}
+
+.hint {
+  margin-top: 30px;
+  color: #f5576c;
+  font-size: 1rem;
+  font-style: italic;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.falling-heart {
+  position: fixed;
+  top: -50px;
+  font-size: 2rem;
+  animation: fall linear forwards;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.success-title {
+  font-size: 4rem;
+  color: #f5576c;
+  margin-bottom: 30px;
+  font-weight: 700;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.big-heart {
+  margin: 30px 0;
+}
+
+.success-message {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.success-submessage {
+  font-size: 1.3rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  top: -20px;
+  animation: confetti linear forwards;
+  z-index: 5;
+  border-radius: 50%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .content {
+    padding: 40px 30px;
+    border-radius: 20px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .heart-icon {
+    font-size: 3.5rem;
+  }
+
+  .message {
+    font-size: 1.1rem;
+  }
+
+  .yes-button,
+  .no-button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+  }
+
+  .success-title {
+    font-size: 2.5rem;
+  }
+
+  .success-message {
+    font-size: 1.4rem;
+  }
+
+  .success-submessage {
+    font-size: 1.1rem;
+  }
+
+  .hint {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .heart-icon {
+    font-size: 3rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+
+  .buttons-container {
+    gap: 15px;
+  }
+
+  .yes-button,
+  .no-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  .success-title {
+    font-size: 2rem;
+  }
+
+  .success-message {
+    font-size: 1.2rem;
+  }
+
+  .success-submessage {
+    font-size: 1rem;
+  }
+}
