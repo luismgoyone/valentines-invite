@@ -1,1 +1,0 @@
-The purpose of this project is to create a simple mobile responsive invite for me to send to my gf where I would ask her to be my valentine's date. This would of course be deployed to vercel and I would send her the link and she'll then open it to see the valentine's themed website where I would ask her out to be my valentine's date
