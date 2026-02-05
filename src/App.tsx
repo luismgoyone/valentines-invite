@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './styles/App.css';
 import prayerIcon from './assets/prayer.png';
-import hoorayGif from './assets/hooray-letsgo.gif';
+import venomDunkGif from './assets/venom-dunk.gif';
 
 interface Heart {
   id: number;
@@ -116,10 +116,10 @@ function App() {
         <div className="content">
           <h1 className="success-title">HOOORAH! 🎉</h1>
           <div className="big-heart">
-            <img src={hoorayGif} alt="Hooray Let's Go" className="hooray-gif" />
+            <img src={venomDunkGif} alt="Venom Dunk" className="hooray-gif" />
           </div>
           <p className="success-message">
-            You won't regret it baby 😉
+            You won't regret it, Sheila!
           </p>
         </div>
       </div>
@@ -143,7 +143,7 @@ function App() {
       ))}
       
       <div className="content">
-        <h1 className="title">Will you be my valentine? 💝</h1>
+        <h1 className="title">Can I be your Valentine? 💝</h1>
         <div className="heart-icon">
           <img src={prayerIcon} alt="Prayer" className="prayer-icon" />
         </div>
